@@ -8,7 +8,7 @@ postcode character(10)
 
 
 
-\copy london_stations FROM 'C:\\Users\\rsullivan\\python_sandbox\\cycle-save\\stations.csv'
+\copy london_stations FROM 'C:\Users\rsullivan\python_sandbox\cycle-save\stations.csv' WITH DELIMITER ',';
 
 ALTER TABLE london_stations ADD COLUMN gid serial PRIMARY KEY;
 
