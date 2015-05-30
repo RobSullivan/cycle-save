@@ -12,7 +12,7 @@ postcode character(10)
 
 ALTER TABLE london_stations ADD COLUMN gid serial PRIMARY KEY;
 
-ALTER TABLE london_stations ADD COLUMN geom geometry (POINT, 4326);
+ALTER TABLE london_stations ADD COLUMN geom geometry(POINT, 4326);
 
 UPDATE london_stations SET geom = ST_SetSRID(ST_MakePoint(longitude,latitude),4326);
 
